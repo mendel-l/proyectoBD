@@ -17,7 +17,7 @@ namespace WinUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            Console.WriteLine("sdfsef");
+            Console.WriteLine("sdfsef"); //frank commit
         }
     }
 }
