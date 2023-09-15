@@ -28,8 +28,7 @@ namespace WinUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Persona form = new Persona();
-            this.Show();
+            //hola
         }
     }
 }
