@@ -12,10 +12,10 @@ using BLL; //invocamos la logica del negocio
 
 namespace WinUI
 {
-    public partial class Form1 : Form
+    public partial class Persona : Form
     {
         ClassLogicaPersona logica = new ClassLogicaPersona(); //se crea un objeto 
-        public Form1()
+        public Persona()
         {
             InitializeComponent();
         }
@@ -26,15 +26,10 @@ namespace WinUI
             dataGridView1.Refresh();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Persona form = new Persona();
-            form.Show();
+            this.Show();
         }
     }
 }
