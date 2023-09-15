@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using DAL.DataSetPersonaTableAdapters; //usa el DAL
+using DAL.DataSet1TableAdapters; //usa el DAL
 using System.Data; //usa el DATA TABLE
 
 namespace BLL
@@ -28,7 +28,7 @@ namespace BLL
         //METODOS
         public DataTable ListarPersonas()
         {
-            return PERSONA.GetDataPersona(); //from select *  //selecciona la capa
+            return PERSONA.GetData();
         }
 
     }
