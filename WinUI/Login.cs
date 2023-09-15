@@ -12,29 +12,37 @@ using BLL; //invocamos la logica del negocio
 
 namespace WinUI
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         ClassLogicaPersona logica = new ClassLogicaPersona(); //se crea un objeto 
-        public Form1()
+
+        public Login()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = logica.ListarPersonas(); //carga los datos
-            dataGridView1.Refresh();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+   
 
         private void button1_Click(object sender, EventArgs e)
         {
             Persona form = new Persona();
             form.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreatAcc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InSesion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
