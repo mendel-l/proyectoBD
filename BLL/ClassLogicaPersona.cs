@@ -22,6 +22,9 @@ namespace BLL
                 if (persona == null)
                     persona = new PersonaTableAdapter();
                 return persona;
+               
+
+
 
             }
         }
