@@ -35,8 +35,8 @@
             this.InSesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.USR_Pass = new System.Windows.Forms.TextBox();
-            this.USR_Log = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
+            this.tbUser = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblPassError = new System.Windows.Forms.Label();
             this.lblUserError = new System.Windows.Forms.Label();
@@ -59,13 +59,15 @@
             // 
             // InSesion
             // 
+            this.InSesion.BackColor = System.Drawing.Color.Transparent;
             this.InSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InSesion.ForeColor = System.Drawing.Color.Black;
             this.InSesion.Location = new System.Drawing.Point(95, 266);
             this.InSesion.Name = "InSesion";
             this.InSesion.Size = new System.Drawing.Size(100, 40);
             this.InSesion.TabIndex = 3;
             this.InSesion.Text = "Ingresar";
-            this.InSesion.UseVisualStyleBackColor = true;
+            this.InSesion.UseVisualStyleBackColor = false;
             this.InSesion.Click += new System.EventHandler(this.InSesion_Click);
             // 
             // label1
@@ -88,21 +90,21 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Contraseña";
             // 
-            // USR_Pass
+            // tbPass
             // 
-            this.USR_Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.USR_Pass.Location = new System.Drawing.Point(152, 221);
-            this.USR_Pass.Name = "USR_Pass";
-            this.USR_Pass.Size = new System.Drawing.Size(149, 26);
-            this.USR_Pass.TabIndex = 7;
+            this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPass.Location = new System.Drawing.Point(152, 221);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.Size = new System.Drawing.Size(149, 26);
+            this.tbPass.TabIndex = 7;
             // 
-            // USR_Log
+            // tbUser
             // 
-            this.USR_Log.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.USR_Log.Location = new System.Drawing.Point(152, 175);
-            this.USR_Log.Name = "USR_Log";
-            this.USR_Log.Size = new System.Drawing.Size(149, 26);
-            this.USR_Log.TabIndex = 8;
+            this.tbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUser.Location = new System.Drawing.Point(152, 175);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(149, 26);
+            this.tbUser.TabIndex = 8;
             // 
             // btnClear
             // 
@@ -162,6 +164,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.InSesion);
@@ -170,10 +173,10 @@
             this.groupBox1.Controls.Add(this.lblPassError);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblUserError);
-            this.groupBox1.Controls.Add(this.USR_Pass);
-            this.groupBox1.Controls.Add(this.USR_Log);
+            this.groupBox1.Controls.Add(this.tbPass);
+            this.groupBox1.Controls.Add(this.tbUser);
             this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Location = new System.Drawing.Point(86, 53);
+            this.groupBox1.Location = new System.Drawing.Point(95, 53);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(383, 330);
             this.groupBox1.TabIndex = 23;
@@ -206,8 +209,8 @@
         private System.Windows.Forms.Button InSesion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox USR_Pass;
-        private System.Windows.Forms.TextBox USR_Log;
+        private System.Windows.Forms.TextBox tbPass;
+        private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblPassError;
         private System.Windows.Forms.Label lblUserError;
