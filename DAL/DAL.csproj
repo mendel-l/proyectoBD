@@ -45,10 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DataSet2.Designer.cs">
+    <Compile Include="DataSetUSR.cs">
+      <DependentUpon>DataSetUSR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetUSR.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet2.xsd</DependentUpon>
+      <DependentUpon>DataSetUSR.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetPersona.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -64,16 +67,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DataSet2.xsc">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
+    <None Include="DataSetUSR.xsc">
+      <DependentUpon>DataSetUSR.xsd</DependentUpon>
     </None>
-    <None Include="DataSet2.xsd">
+    <None Include="DataSetUSR.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetUSR.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSet2.xss">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
+    <None Include="DataSetUSR.xss">
+      <DependentUpon>DataSetUSR.xsd</DependentUpon>
     </None>
     <None Include="DataSetPersona.xsc">
       <DependentUpon>DataSetPersona.xsd</DependentUpon>
