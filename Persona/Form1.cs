@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinUI
+namespace Persona
 {
     public partial class Form1 : Form
     {
