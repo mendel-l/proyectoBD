@@ -22,11 +22,9 @@ namespace WinUI
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-   
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Persona form = new Persona();
+            FormMenu form = new FormMenu();
             form.Show();
         }
 
