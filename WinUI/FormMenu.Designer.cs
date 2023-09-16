@@ -43,6 +43,7 @@
             this.btnPersona.TabIndex = 3;
             this.btnPersona.Text = "Persona";
             this.btnPersona.UseVisualStyleBackColor = true;
+            this.btnPersona.Click += new System.EventHandler(this.btnPersona_Click);
             // 
             // button2
             // 

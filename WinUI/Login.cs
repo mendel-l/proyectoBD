@@ -25,6 +25,10 @@ namespace WinUI
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private bool dragging = false;
+        private bool showPassword = false;
+        private Point dragStart;
+
         public string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -66,6 +70,7 @@ namespace WinUI
 
         private void InSesion_Click(object sender, EventArgs e)
         {
+            /*
             string username = tbUser.Text;
             string enteredPassword = tbPass.Text;
 
@@ -81,6 +86,27 @@ namespace WinUI
             {
                 // Contraseña incorrecta, muestra un mensaje de error
                 MessageBox.Show("Contraseña incorrecta. Intenta de nuevo.");
+            }
+            */
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            tbUser.Text = "";
+            tbPass.Text = "";
+        }
+
+        private void btnShowPass_Click(object sender, EventArgs e)
+        {
+            if (showPassword)
+            {
+                tbPass.PasswordChar = '*'; // Ocultar contraseña
+                showPassword = false;
+            }
+            else
+            {
+                tbPass.PasswordChar = '\0'; // Mostrar contraseña
+                showPassword = true;
             }
         }
     }

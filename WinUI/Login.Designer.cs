@@ -47,6 +47,18 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnShowPass
+            // 
+            btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btnShowPass.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPass.Image")));
+            btnShowPass.Location = new System.Drawing.Point(307, 221);
+            btnShowPass.Name = "btnShowPass";
+            btnShowPass.Size = new System.Drawing.Size(31, 26);
+            btnShowPass.TabIndex = 22;
+            btnShowPass.UseVisualStyleBackColor = true;
+            btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(485, 421);
@@ -117,17 +129,7 @@
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "Limpiar";
             this.btnClear.UseVisualStyleBackColor = false;
-            // 
-            // btnShowPass
-            // 
-            btnShowPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            btnShowPass.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPass.Image")));
-            btnShowPass.Location = new System.Drawing.Point(307, 221);
-            btnShowPass.Name = "btnShowPass";
-            btnShowPass.Size = new System.Drawing.Size(31, 26);
-            btnShowPass.TabIndex = 22;
-            btnShowPass.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblPassError
             // 
@@ -154,7 +156,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::WinUI.Properties.Resources._6073874;
             this.pictureBox1.Location = new System.Drawing.Point(120, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 150);
@@ -187,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::WinUI.Properties.Resources.d8c5b314_2d31_41d0_b7e4_cf121ff6dacd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(579, 470);
             this.Controls.Add(this.groupBox1);

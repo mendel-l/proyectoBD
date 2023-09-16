@@ -16,5 +16,11 @@ namespace WinUI
         {
             InitializeComponent();
         }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            Persona form = new Persona();
+            form.Show();
+        }
     }
 }
