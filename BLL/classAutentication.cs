@@ -59,7 +59,7 @@ namespace BLL
         public string crearUsuario(string usuario, string password, int idPersona,int idRol)
         {
             int existe;
-            existe = Convert.ToInt32(Usuario.ScalarQuery(usuario));
+            existe = Convert.ToInt32(Usuario.ScalarQuery2(usuario));
             if (existe > 0)
                 return "Error: El Usuario '" + usuario + "' Ya Existe";
             else
