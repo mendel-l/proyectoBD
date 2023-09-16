@@ -66,7 +66,7 @@ namespace BLL
             {
                 string sal = BCrypt.Net.BCrypt.GenerateSalt();
                 string passwordHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
-                Usuario.InsertQuery(usuario, passwordHash,idRol,idPersona,sal);
+                Usuario.InsertQuery1(usuario, passwordHash,idRol,idPersona,sal);
                 return "Usuario Registrado Exitosamente";
             }
         }
