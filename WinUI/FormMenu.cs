@@ -22,5 +22,11 @@ namespace WinUI
             Persona form = new Persona();
             form.Show();
         }
+
+        private void USRCreate_Click(object sender, EventArgs e)
+        {
+            CreateUSR login = new CreateUSR();
+            login.Show();
+        }
     }
 }

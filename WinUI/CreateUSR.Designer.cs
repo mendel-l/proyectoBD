@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.CContra = new System.Windows.Forms.TextBox();
+            this.TIDP = new System.Windows.Forms.TextBox();
+            this.Contra = new System.Windows.Forms.TextBox();
+            this.TIDR = new System.Windows.Forms.TextBox();
+            this.NomUsr = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.CContra);
+            this.groupBox1.Controls.Add(this.TIDP);
+            this.groupBox1.Controls.Add(this.Contra);
+            this.groupBox1.Controls.Add(this.TIDR);
+            this.groupBox1.Controls.Add(this.NomUsr);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
@@ -61,40 +62,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Crear usuario";
             // 
-            // textBox6
+            // CContra
             // 
-            this.textBox6.Location = new System.Drawing.Point(418, 84);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 18;
+            this.CContra.Location = new System.Drawing.Point(418, 84);
+            this.CContra.Name = "CContra";
+            this.CContra.Size = new System.Drawing.Size(100, 20);
+            this.CContra.TabIndex = 18;
             // 
-            // textBox7
+            // TIDP
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 127);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(169, 20);
-            this.textBox7.TabIndex = 17;
+            this.TIDP.Location = new System.Drawing.Point(120, 127);
+            this.TIDP.Name = "TIDP";
+            this.TIDP.Size = new System.Drawing.Size(169, 20);
+            this.TIDP.TabIndex = 17;
             // 
-            // textBox8
+            // Contra
             // 
-            this.textBox8.Location = new System.Drawing.Point(122, 84);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(169, 20);
-            this.textBox8.TabIndex = 15;
+            this.Contra.Location = new System.Drawing.Point(122, 84);
+            this.Contra.Name = "Contra";
+            this.Contra.Size = new System.Drawing.Size(169, 20);
+            this.Contra.TabIndex = 15;
             // 
-            // textBox9
+            // TIDR
             // 
-            this.textBox9.Location = new System.Drawing.Point(120, 174);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(169, 20);
-            this.textBox9.TabIndex = 16;
+            this.TIDR.Location = new System.Drawing.Point(120, 174);
+            this.TIDR.Name = "TIDR";
+            this.TIDR.Size = new System.Drawing.Size(169, 20);
+            this.TIDR.TabIndex = 16;
             // 
-            // textBox10
+            // NomUsr
             // 
-            this.textBox10.Location = new System.Drawing.Point(122, 36);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(169, 20);
-            this.textBox10.TabIndex = 14;
+            this.NomUsr.Location = new System.Drawing.Point(122, 36);
+            this.NomUsr.Name = "NomUsr";
+            this.NomUsr.Size = new System.Drawing.Size(169, 20);
+            this.NomUsr.TabIndex = 14;
             // 
             // label6
             // 
@@ -141,11 +142,22 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Nombre Usuario";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(37, 283);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 33);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CreateUSR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 537);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "CreateUSR";
             this.Text = "gru";
@@ -158,15 +170,16 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox CContra;
+        private System.Windows.Forms.TextBox TIDP;
+        private System.Windows.Forms.TextBox Contra;
+        private System.Windows.Forms.TextBox TIDR;
+        private System.Windows.Forms.TextBox NomUsr;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button1;
     }
 }

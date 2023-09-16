@@ -17,8 +17,8 @@ namespace WinUI
 {
     public partial class Login : Form
     {
-        ClassLogicaPersona logica = new ClassLogicaPersona(); //se crea un objeto 
-
+        Hashpassword autentication = new Hashpassword(); //se crea un objeto 
+      
         public Login()
         {
             InitializeComponent();
@@ -70,24 +70,24 @@ namespace WinUI
 
         private void InSesion_Click(object sender, EventArgs e)
         {
-            /*
-            string username = tbUser.Text;
-            string enteredPassword = tbPass.Text;
 
-            string storedHashedPassword = logica.GetStoredPasswordHash(username);
+            string usuario = tbUser.Text;
+            string password = tbPass.Text;
 
-            if (VerifyPassword(enteredPassword, storedHashedPassword))
+            string verify = autentication.VerifyPassword(usuario, password);
+            if (verify!= "Invalido")
             {
-                // Contraseña correcta, inicia sesión
+              
+                MessageBox.Show("Usuario verificado", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormMenu form = new FormMenu();
                 form.Show();
+
             }
             else
             {
-                // Contraseña incorrecta, muestra un mensaje de error
-                MessageBox.Show("Contraseña incorrecta. Intenta de nuevo.");
+              
+                MessageBox.Show("Tu usuario o contraseña no coincide intentalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
         }
 
         private void btnClear_Click(object sender, EventArgs e)

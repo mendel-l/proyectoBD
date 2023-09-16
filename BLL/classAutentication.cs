@@ -3,7 +3,7 @@ using System;
 
 namespace BLL
 {
-    internal class Hashpassword
+    public class Hashpassword
     {
         private UsuarioTableAdapter usuario = null;
         private UsuarioTableAdapter Usuario
@@ -21,38 +21,55 @@ namespace BLL
 
         public string VerifyPassword(string usuario, string password)
         {
-            var userData = Usuario.GetDataUser(usuario);/*
-            Console.WriteLine(userData[0][2].ToString() + userData[0][3].ToString());*/
-            try
-            {
-                if (userData.Rows.Count == 1)
+            var userData = Usuario.GetDataUser(usuario);
+                                                         
+
+
+
+               try
                 {
-                    string savedHash = userData.Rows[0][2].ToString();
-                    string sal = userData.Rows[0][3].ToString();
-                    string generateHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
-                    if (generateHash == savedHash)
+                    if (userData.Rows.Count == 1)
                     {
-                        string nivelAcceso = userData.Rows[0][5].ToString();
-                        return nivelAcceso;
+                        string savedHash = userData.Rows[0][2].ToString();
+                        string sal = userData.Rows[0][5].ToString();
+                        string generateHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
+                        if (generateHash == savedHash)
+                        {
+                           
+                            return "usuario existente";
+                        }
+                        else
+                        {
+
+                            return "Invalido";
+                        }
                     }
-                    else
-                    {
-                        /*Console.WriteLine("Hash diferente");*/
-                        return "Invalido";
-                    }
+
+
+                    return "Invalido";
+
                 }
-
-                /* Console.WriteLine();*/
-                return "Invalido";
-
-            }
-            catch (Exception error)
-            {
-                return "Invalido:" + error.ToString();
-            }
-
+                catch (Exception error)
+                {
+                    return "Invalido:" + error.ToString();
+                }
+            return "Invalido";
         }
 
+        public string crearUsuario(string usuario, string password, int idPersona,int idRol)
+        {
+            int existe;
+            existe = Convert.ToInt32(Usuario.ScalarQuery(usuario));
+            if (existe > 0)
+                return "Error: El Usuario '" + usuario + "' Ya Existe";
+            else
+            {
+                string sal = BCrypt.Net.BCrypt.GenerateSalt();
+                string passwordHash = BCrypt.Net.BCrypt.HashPassword(password, sal);
+                Usuario.InsertQuery(usuario, passwordHash,idRol,idPersona,sal);
+                return "Usuario Registrado Exitosamente";
+            }
+        }
 
     }
 
